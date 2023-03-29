@@ -33,9 +33,16 @@ GodisnjeDoba(4);
 //Napisi funkciju koja okrece uneseni string i broji charactere uzimajuci u obzir prazna mjesta (eng. whitespaces)
 //INPUT: "Pisanje zadataka nije jednostavan posao"
 //OUTPUT: ("oasop navatsondej ejin akatadaz ejnasiP", 39)
-function reversedString (str) {
-    
+function reversedString (str, brojac) {
+    brojac = 0;
+    let okrenutiString = "";
+    for(let i = str.length; i >= 0; i--) {
+        brojac++;
+        okrenutiString += str[i];
+    }
+    console.log(okrenutiString, brojac);
 }
+reversedString("Pisanje zadataka nije jednostavan posao");
 
 //4 (4 BODA)
 //Napisi funkciju koja odreduje najdulju vrijednostu u danom objektu
@@ -59,7 +66,7 @@ function NajduljaVrijednost (somePeople) {
     }
     return najdulje;
 }
-NajduljaVrijednost(Donald);
+
 //5 (4 BODA)
 //Napisi funkciju u obliku function expressiona koja vraca neproste brojeve
 //INPUT: [3, 4, 5, 8, 11]
