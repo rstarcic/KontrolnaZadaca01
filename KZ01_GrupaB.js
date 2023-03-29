@@ -72,7 +72,16 @@ console.log(NajduljaVrijednost("Donald"));
 //Napisi funkciju u obliku function expressiona koja vraca neproste brojeve
 //INPUT: [3, 4, 5, 8, 11]
 //OUTPUT: [4, 5, 8]
-
+let neprosti = function(broj) {
+    let neprostiBr = [];
+    for(i of broj) {
+        if ( i % i != 0 && i % 2 == 0) {
+            neprostiBr.push(i);
+        }
+    }
+    return neprostiBr;
+}
+console.log(neprosti([3, 4, 5, 8, 11]));
 //ZAMJENA ZA 5 (4 BODA)
 //Napisi funkciju u obliku arrow functiona koja pretvara mala slova danih inputa u velika slova
 //INPUT: ["aa", "b1", "", null, "AAA"]
@@ -109,7 +118,7 @@ function tempDrzave (someStates, temperature) {
     let rez = [];
     for( temperature in someStates ) {
         if(someStates.measuredTemperature < temperature) {
-            rez += someStates;
+            rez.push(someStates);
         }
     }
     return rez;
