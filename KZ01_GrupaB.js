@@ -105,4 +105,13 @@ const someEvents = [
 ];
 //INPUT: (someStates, 48.5)
 //OUTPUT: [{stateName: "Grcka", measuredTemperature: 48.0}]
-function tempDrzava () {}
+function tempDrzave (someStates, temperature) {
+    let rez = [];
+    for( temperature in someStates ) {
+        if(someStates.measuredTemperature < temperature) {
+            rez += someStates;
+        }
+    }
+    return rez;
+}
+console.log(tempDrzave(someEvents, 48.5));
