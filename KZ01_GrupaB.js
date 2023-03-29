@@ -7,7 +7,7 @@ function neparniBrojevi () {
         }
     }
 }
-neparniBrojevi();
+// neparniBrojevi();
 //2 (3 BODA)
 //Napisi funkciju koja koristi switch selekciju za pretvaranje numerickog unosa u godisnje u doba. Za neispravan unos ispisi prikladnu poruku.
 //INPUT: 1; OUTPUT: "Jesen";
@@ -28,7 +28,7 @@ function GodisnjeDoba (number) {
             break;
     }
 }
-GodisnjeDoba(4);
+// GodisnjeDoba(4);
 //3 (4 BODA)
 //Napisi funkciju koja okrece uneseni string i broji charactere uzimajuci u obzir prazna mjesta (eng. whitespaces)
 //INPUT: "Pisanje zadataka nije jednostavan posao"
@@ -42,7 +42,7 @@ function reversedString (str, brojac) {
     }
     console.log(okrenutiString, brojac);
 }
-reversedString("Pisanje zadataka nije jednostavan posao");
+// reversedString("Pisanje zadataka nije jednostavan posao");
 
 //4 (4 BODA)
 //Napisi funkciju koja odreduje najdulju vrijednostu u danom objektu
@@ -60,12 +60,13 @@ const peopleYouShouldKnow = {
 function NajduljaVrijednost (somePeople) {
     let najdulje = 0;
     for(key in somePeople) {
-        if(somePeople[key].length > najdulje) {
-            najdulje = somePeople[key];
+        if(somePeople.length > najdulje) {
+            najdulje = somePeople;
         }
     }
     return najdulje;
 }
+console.log(NajduljaVrijednost("Donald"));
 
 //5 (4 BODA)
 //Napisi funkciju u obliku function expressiona koja vraca neproste brojeve
@@ -76,6 +77,7 @@ function NajduljaVrijednost (somePeople) {
 //Napisi funkciju u obliku arrow functiona koja pretvara mala slova danih inputa u velika slova
 //INPUT: ["aa", "b1", "", null, "AAA"]
 //OUTPUT: ["AA","B1", "", null, "AAA"]
+
 
 //6 (4 BODA)
 //Napisi funkciju koja vraca sve drzave koji su imali manju temperaturu od one iz ulaznog parametra
