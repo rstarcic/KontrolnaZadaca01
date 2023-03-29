@@ -60,8 +60,8 @@ const peopleYouShouldKnow = {
 function NajduljaVrijednost (somePeople) {
     let najdulje = 0;
     for(key in somePeople) {
-        if(somePeople.length > najdulje) {
-            najdulje = somePeople;
+        if(somePeople[key].length > najdulje) {
+            najdulje = somePeople[key];
         }
     }
     return najdulje;
@@ -75,7 +75,7 @@ console.log(NajduljaVrijednost("Donald"));
 let neprosti = function(broj) {
     let neprostiBr = [];
     for(i of broj) {
-        if ( i % i != 0 && i % 2 == 0) {
+        if (i % 2 == 0 && i % 3 != 0 || i % 5 == 0) {
             neprostiBr.push(i);
         }
     }
@@ -116,11 +116,11 @@ const someEvents = [
 //OUTPUT: [{stateName: "Grcka", measuredTemperature: 48.0}]
 function tempDrzave (someStates, temperature) {
     let rez = [];
-    for( temperature in someStates ) {
-        if(someStates.measuredTemperature < temperature) {
-            rez.push(someStates);
+    for( let prop in someStates ) {
+        if(someStates[prop].measuredTemperature < temperature) {
+            rez.push(someStates[prop]);
         }
     }
     return rez;
 }
-console.log(tempDrzave(someEvents, 48.5));
+// console.log(tempDrzave(someEvents, 48.5));
